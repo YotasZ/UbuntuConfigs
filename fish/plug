@@ -1,0 +1,24 @@
+#! /bun/bash
+
+sudo apt-get install fish
+sudo chsh -s /usr/bin/fish
+fish
+
+#设置别名
+alias l "ls -lha"
+alias r "ranger"
+alias c "clear"
+funcsave l
+funcsave r
+funcsave c
+
+#设置终端样式
+function fish_prompt
+  test $SSH_TTY
+  and printf (set_color red)$USER(set_color brwhite)'@'(set_color yellow)(prompt_hostname)' '
+  test "$USER" = 'root'
+  and echo (set_color red)"#"
+  # Main
+  echo -n (set_color cyan)(prompt_pwd) (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+end
+
