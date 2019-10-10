@@ -1,4 +1,4 @@
-#!usr/bin/fish
+#! /bin/bash
 sudo apt-get install yum
 sudo cp ./fedora-163.repo /etc/yum/repos.d/fedora-163.repo
 sudo cp ./fedora-updates-163.repo /etc/yum/repos.d/fedora-updates-163.repo
