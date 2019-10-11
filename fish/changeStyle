@@ -1,0 +1,4 @@
+#! /bin/bash
+cp ./fishd.HappyZhou ~/.config/fish/fishd.
+echo '执行：cd ~/.config/fish'
+echo '添加主机名到fishd.文件后缀，并删除原配置文件'
