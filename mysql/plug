@@ -1,0 +1,5 @@
+#! /bin/bash
+
+# 安装
+sudo apt-get install mysql-server
+

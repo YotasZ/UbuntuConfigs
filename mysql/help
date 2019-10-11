@@ -1,0 +1,23 @@
+#! /bin/bash
+
+echo '执行：\e[1;32mdpkg -l | grep mysql\e[0m-->查看有没有安装MySQL'
+echo '执行：\e[1;32mnetstat -tap | grep mysql\e[0m-->检查是否安装成功 如果看到有 mysql 的socket处于 LISTEN 状态则表示安装成功'
+echo '登录mysql数据库可以通过如下命令：\e[1;32mmysql -u root -p\e[0m
+            -u 表示选择登陆的用户名， -p 表示登陆的用户密码，现在是mysql数据库是没有密码的，
+			Enter password:处直接回车，就能够进入mysql数据库。
+            然后通过 \e[1;32mshow databases\e[0m; 就可以查看当前的所有数据库'
+echo '执行： \e[1;32mmysql_secure_installation\e[0m-->安装验证密码插件'
+echo '执行：\e[1;32msystemctl status mysql\e[0m-->查看mysql服务状态'
+
+
+echo '配置远程登录：
+		step1，\e[1;32mvim /etc/mysql/mysql.conf.d/mysqld.cnf\e[0m
+              注释掉bind-address          = 127.0.0.1
+			  保存退出
+	    step2，\e[1;32mmysql -u root -p\e[0m
+              \e[1;32mmysql> grant all on *.* to root@'%' identified by '你的密码' with grant option;\e[0m#这里注意密码有大小写及特殊字符
+              \e[1;32mmysql> flush privileges;\e[0m    # 刷新权限
+              \e[1;32mmysql> exit\e[0m
+              然后执行exit命令退出mysql服务，再执行如下命令重启mysql：
+              \e[1;32msystemctl restart mysql\3[0m
+			  \e[1;31m注意：这里在腾讯云服务器给的终端上执行\e[0m'
