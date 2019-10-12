@@ -8,7 +8,8 @@ echo '登录mysql数据库可以通过如下命令：\e[1;32mmysql -u root -p\e[
             然后通过 \e[1;32mshow databases\e[0m; 就可以查看当前的所有数据库'
 echo '执行： \e[1;32mmysql_secure_installation\e[0m-->安装验证密码插件'
 echo '执行：\e[1;32msystemctl status mysql\e[0m-->查看mysql服务状态'
-
+echo '执行：\e[1;32mnetstat -ntpl\e[0m   # 查看服务
+	  执行：\e[1;32mmysql --help|grep 'my.cnf'\e[0m  # 查看my.cnf加载路径'
 
 echo '配置远程登录：
 		step1，\e[1;32mvim /etc/mysql/mysql.conf.d/mysqld.cnf\e[0m

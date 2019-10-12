@@ -1,0 +1,6 @@
+1,如果出现安装最新python后pip3出现以下报错
+	subprocess.CalledProcessError:Command '('lsb_release','-a')' 
+	执行：sudo rm /usr/bin/lsb_release
+2,如果出现setup.py文件问题，请尝试
+	sudo pip3 --upgrade --force pip
+	sudo pip3 install setuptools

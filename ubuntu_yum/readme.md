@@ -14,3 +14,6 @@ apt-get install yum
 yum makecache
 
 即可完成在Ubuntu中安装yum
+
+
+# 注意： plug修改的文件中，将/etc/yum/repos.d/下的两个文件的参数gpgcheck=1改为了0，意味着在下载的过程中不需要检查软件的秘钥。（目前没有找到ubuntu下对应的秘钥）

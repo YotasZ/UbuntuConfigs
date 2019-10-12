@@ -5,7 +5,7 @@ baseurl=http://mirrors.163.com/fedora/releases/17/Everything/$basearch/os/
 mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=$basearch
 enabled=1
 metadata_expire=7d
-gpgcheck=1
+gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
  
  
